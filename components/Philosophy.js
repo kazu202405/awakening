@@ -22,6 +22,10 @@ export default function Philosophy() {
 
   return (
     <section id="philosophy" className="philosophy">
+      <div className="sparkles" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
       <div className="container">
         <div className="section-header">
           <span className="section-label">Philosophy</span>

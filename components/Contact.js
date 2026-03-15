@@ -1,6 +1,10 @@
 export default function Contact() {
   return (
     <section id="contact" className="contact">
+      <div className="sparkles" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
       <div className="container">
         <div className="section-header">
           <span className="section-label">Contact</span>
@@ -35,8 +39,8 @@ export default function Contact() {
             <span className="contact-icon" role="img" aria-hidden="true">
               &#x1F4BC;
             </span>
-            <h3>企業研修 / セミナー</h3>
-            <p>法人研修・セミナーのお申し込み</p>
+            <h3>能力開花推進事業部</h3>
+            <p>セミナー・研修・講演会のお申し込み</p>
             <a href="#contact" className="contact-btn">
               お問い合わせ
             </a>

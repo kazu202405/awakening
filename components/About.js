@@ -10,9 +10,7 @@ export default function About() {
           <div className="about-text">
             <h3>一般社団法人アウェイクニング</h3>
             <p>
-              アウェイクニング協会は、藤原恵津子が代表を務める「Coach
-              FIORE（コーチ・フィオーレ）」の
-              活動をさらに広げ、「父親・母親・子供の3人一体」で社会を変えていくことを目的とした
+              アウェイクニング協会は、「父親・母親・子供の3人一体」で社会を変えていくことを目的とした
               一般社団法人です。
             </p>
             <p>
@@ -24,42 +22,36 @@ export default function About() {
                 <span className="info-label">代表</span>
                 <span className="info-value">藤原恵津子</span>
               </div>
-              <div className="info-item">
-                <span className="info-label">母体</span>
-                <span className="info-value">
-                  Coach FIORE（コーチ・フィオーレ）
-                </span>
-              </div>
-              <div className="info-item">
+<div className="info-item">
                 <span className="info-label">形態</span>
                 <span className="info-value">一般社団法人</span>
               </div>
             </div>
           </div>
           <div className="about-strategy">
-            <h4>マーケティング戦略</h4>
+            <h4>ご参加の流れ</h4>
             <div className="strategy-flow">
               <div className="flow-step">
                 <span className="flow-number">1</span>
                 <div>
-                  <strong>コミュニティ入口</strong>
-                  <p>Happy Mother&apos;s（無料相談会）で接点を創出</p>
+                  <strong>まずは気軽に参加</strong>
+                  <p>無料相談会やハッピーマザーズクラブで、お気軽にご参加ください</p>
                 </div>
               </div>
               <div className="flow-arrow">↓</div>
               <div className="flow-step">
                 <span className="flow-number">2</span>
                 <div>
-                  <strong>講座・学園へ誘導</strong>
-                  <p>各種講座やみらいのたね学園へつなげる</p>
+                  <strong>講座・学園で学ぶ</strong>
+                  <p>母親講座やみらいのたね学園で、親子で一緒に成長していきます</p>
                 </div>
               </div>
               <div className="flow-arrow">↓</div>
               <div className="flow-step">
                 <span className="flow-number">3</span>
                 <div>
-                  <strong>認定講師育成</strong>
-                  <p>修了者が地域で活動し、さらに広がる</p>
+                  <strong>お仕事にする</strong>
+                  <p>ご希望の方は認定講師として、学びを活かしたお仕事をしていただけます</p>
                 </div>
               </div>
             </div>

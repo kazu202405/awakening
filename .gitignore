@@ -1,5 +1,7 @@
 node_modules/
 .next/
 .claude/
-*.png
 *.pptx
+
+# ルート直下の背景素材のみ除外（publicは含める）
+/背景*.png

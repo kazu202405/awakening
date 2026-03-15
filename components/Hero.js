@@ -5,18 +5,17 @@ export default function Hero() {
       <div className="hero-overlay"></div>
       <div className="hero-stars"></div>
       <div className="hero-content">
-        <p className="hero-tagline">競争から共創へ。和の精神で可能性を開く。</p>
+        <p className="hero-tagline">お子さんの可能性を信じるあなたへ</p>
         <h1 className="hero-title">
           <span className="hero-title-en">AWAKENING</span>
           <span className="hero-title-ja">一般社団法人アウェイクニング</span>
         </h1>
         <p className="hero-description">
-          私たちは、比較や競争の中で本来の価値や可能性を見失いがちな社会から、<br />
-          互いの個性を生かし合う共創の社会への転換を目指しています。<br />
-          本来の自分が目覚める社会へ。
+          競争から共創へ。和の精神で可能性を開く。<br />
+          子ども・母親・家庭から、本来の自分が目覚める社会へ。
         </p>
-        <a href="#programs" className="hero-cta">
-          事業内容を見る
+        <a href="#contact" className="hero-cta">
+          無料相談会に参加する
         </a>
       </div>
       <div className="hero-scroll">

@@ -7,18 +7,23 @@
 }
 
 :root {
-  --color-primary: #C8D8F0;
-  --color-accent: #6EC6E6;
-  --color-accent-light: #A8E0F0;
-  --color-accent-gold: #D4C5A0;
-  --color-bg: #0A0E27;
-  --color-bg-light: #111833;
-  --color-bg-card: rgba(255, 255, 255, 0.05);
-  --color-text: #D8E2F0;
-  --color-text-light: #A0B4D0;
-  --color-text-muted: #6B7FA0;
+  /* ヒーロー・フッター用（ダーク） */
+  --color-dark: #0A0E27;
+  --color-dark-light: #111833;
+
+  /* メインコンテンツ用（ライト） */
+  --color-bg: #FAFAF8;
+  --color-bg-warm: #F5F0EB;
+  --color-bg-card: #FFFFFF;
+  --color-primary: #1E2D4A;
+  --color-accent: #3A7CA5;
+  --color-accent-soft: #5BA4C9;
+  --color-accent-gold: #C0956C;
+  --color-text: #333333;
+  --color-text-light: #5A6A7A;
+  --color-text-muted: #8A96A4;
   --color-white: #FFFFFF;
-  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border: #E4E8EC;
   --max-width: 1200px;
   --header-height: 80px;
 }
@@ -61,7 +66,7 @@ a {
   height: var(--header-height);
   background: rgba(10, 14, 39, 0.85);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
 }
 
@@ -92,7 +97,7 @@ a {
 .logo-sub {
   font-size: 0.65rem;
   letter-spacing: 0.1em;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .nav {
@@ -104,7 +109,7 @@ a {
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.05em;
-  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s;
   position: relative;
 }
@@ -116,7 +121,7 @@ a {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-accent);
+  background: #6EC6E6;
   transition: width 0.3s;
 }
 
@@ -158,14 +163,14 @@ a {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ===== Hero ===== */
+/* ===== Hero（ダーク・宇宙テーマ） ===== */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg);
+  background: var(--color-dark);
   overflow: hidden;
 }
 
@@ -186,7 +191,6 @@ a {
               linear-gradient(to bottom, rgba(10, 14, 39, 0.3) 0%, rgba(10, 14, 39, 0.6) 100%);
 }
 
-/* 星のきらめきアニメーション */
 .hero-stars {
   position: absolute;
   inset: 0;
@@ -258,7 +262,7 @@ a {
   margin-bottom: 32px;
   opacity: 0.8;
   font-weight: 300;
-  color: var(--color-accent-light);
+  color: #A8E0F0;
 }
 
 .hero-title {
@@ -338,7 +342,7 @@ a {
   50% { opacity: 1; transform: scaleY(1.2); }
 }
 
-/* ===== Sections Common ===== */
+/* ===== Sections Common（ライトテーマ） ===== */
 .section-header {
   text-align: center;
   margin-bottom: 64px;
@@ -358,7 +362,7 @@ a {
   font-family: var(--font-serif), Georgia, serif;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: 16px;
   letter-spacing: 0.05em;
 }
@@ -370,20 +374,79 @@ a {
   font-weight: 300;
 }
 
+/* ===== パステルボケ光 共通 ===== */
+.pastel-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.pastel-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/bg-pastel-bokeh.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.pastel-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle 250px at 15% 30%, rgba(255, 245, 200, 0.3) 0%, transparent 60%),
+    radial-gradient(circle 200px at 80% 70%, rgba(255, 200, 210, 0.2) 0%, transparent 60%),
+    radial-gradient(circle 180px at 50% 50%, rgba(200, 225, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* キラキラ十字星 */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(45deg); }
+}
+
+.sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sparkles span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.sparkles span:nth-child(1) { top: 12%; left: 20%; animation-delay: 0s; }
+.sparkles span:nth-child(2) { top: 25%; left: 75%; animation-delay: 0.8s; width: 6px; height: 6px; }
+.sparkles span:nth-child(3) { top: 55%; left: 45%; animation-delay: 1.5s; }
+.sparkles span:nth-child(4) { top: 70%; left: 85%; animation-delay: 2.2s; width: 5px; height: 5px; }
+.sparkles span:nth-child(5) { top: 40%; left: 10%; animation-delay: 0.5s; width: 7px; height: 7px; }
+.sparkles span:nth-child(6) { top: 85%; left: 55%; animation-delay: 1.8s; width: 6px; height: 6px; }
+
 /* ===== Philosophy ===== */
 .philosophy {
   padding: 120px 0;
-  background: var(--color-bg-light);
+  background: linear-gradient(180deg, #EDF4FC 0%, #F5F0F8 50%, #FDF8F0 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .philosophy::before {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 80%, rgba(110, 198, 230, 0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(160, 120, 200, 0.05) 0%, transparent 50%);
+  background-image: url('/bg-pastel-bokeh.png');
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.3;
   pointer-events: none;
 }
 
@@ -398,16 +461,17 @@ a {
 .value-card {
   text-align: center;
   padding: 40px 24px;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 12px;
   transition: all 0.3s;
+  position: relative;
 }
 
 .value-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(110, 198, 230, 0.2);
-  box-shadow: 0 8px 32px rgba(110, 198, 230, 0.08);
+  box-shadow: 0 8px 32px rgba(58, 124, 165, 0.1);
+  border-color: rgba(58, 124, 165, 0.2);
 }
 
 .value-icon {
@@ -420,7 +484,7 @@ a {
   font-family: var(--font-serif), Georgia, serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: 12px;
   letter-spacing: 0.1em;
 }
@@ -435,7 +499,8 @@ a {
   max-width: 800px;
   margin: 0 auto;
   padding: 48px;
-  background: rgba(110, 198, 230, 0.06);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
   border-left: 3px solid var(--color-accent);
   border-radius: 0 12px 12px 0;
   position: relative;
@@ -452,18 +517,121 @@ a {
 /* ===== Programs ===== */
 .programs {
   padding: 120px 0;
-  background: var(--color-bg);
+  background: linear-gradient(180deg, #FDF8F0 0%, #EDF4FC 50%, #F0F4FB 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .programs::before {
   content: '';
   position: absolute;
+  inset: 0;
+  background-image: url('/bg-pastel-bokeh.png');
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ベン図 */
+.programs-venn {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  height: 420px;
+  margin: 0 auto 80px;
+}
+
+.venn-circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.venn-circle:hover {
+  transform: scale(1.04);
+}
+
+.venn-top {
   top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(110, 198, 230, 0.2), transparent);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(90, 122, 181, 0.12);
+  border: 1.5px solid rgba(90, 122, 181, 0.25);
+}
+
+.venn-top:hover {
+  transform: translateX(-50%) scale(1.04);
+}
+
+.venn-left {
+  bottom: 0;
+  left: 50px;
+  background: rgba(46, 158, 143, 0.12);
+  border: 1.5px solid rgba(46, 158, 143, 0.25);
+}
+
+.venn-right {
+  bottom: 0;
+  right: 50px;
+  background: rgba(192, 149, 108, 0.12);
+  border: 1.5px solid rgba(192, 149, 108, 0.25);
+}
+
+.venn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 20px;
+}
+
+.venn-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.venn-content strong {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1rem;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.venn-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.venn-center {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 16px rgba(58, 124, 165, 0.25);
+  z-index: 1;
 }
 
 .programs-list {
@@ -473,16 +641,17 @@ a {
 }
 
 .program-card {
-  background: var(--color-bg-card);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
   padding: 48px;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 12px;
   transition: all 0.3s;
+  position: relative;
 }
 
 .program-card:hover {
-  border-color: rgba(110, 198, 230, 0.15);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 }
 
 .program-header {
@@ -510,7 +679,7 @@ a {
   font-family: var(--font-serif), Georgia, serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: 4px;
   letter-spacing: 0.05em;
 }
@@ -560,18 +729,19 @@ a {
 /* ===== About ===== */
 .about {
   padding: 120px 0;
-  background: var(--color-bg-light);
+  background: linear-gradient(180deg, #F0F4FB 0%, #F5F0F8 50%, #FDF8F0 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .about::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/bg-cosmic-3.png');
+  background-image: url('/bg-pastel-bokeh.png');
   background-size: cover;
-  background-position: center;
-  opacity: 0.08;
+  background-position: right center;
+  opacity: 0.2;
   pointer-events: none;
 }
 
@@ -580,13 +750,12 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: start;
-  position: relative;
 }
 
 .about-text h3 {
   font-family: var(--font-serif), Georgia, serif;
   font-size: 1.3rem;
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: 20px;
   letter-spacing: 0.05em;
 }
@@ -627,7 +796,7 @@ a {
 .about-strategy h4 {
   font-family: var(--font-serif), Georgia, serif;
   font-size: 1.1rem;
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: 24px;
   letter-spacing: 0.05em;
 }
@@ -643,7 +812,7 @@ a {
   gap: 16px;
   align-items: flex-start;
   padding: 20px;
-  background: var(--color-bg-card);
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 8px;
 }
@@ -655,8 +824,8 @@ a {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-accent), rgba(110, 198, 230, 0.5));
-  color: var(--color-bg);
+  background: var(--color-accent);
+  color: var(--color-white);
   font-size: 0.8rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -664,7 +833,7 @@ a {
 
 .flow-step strong {
   font-size: 0.9rem;
-  color: var(--color-white);
+  color: var(--color-primary);
   display: block;
   margin-bottom: 4px;
 }
@@ -685,18 +854,19 @@ a {
 /* ===== Contact ===== */
 .contact {
   padding: 120px 0;
-  background: var(--color-bg);
+  background: linear-gradient(180deg, #FDF8F0 0%, #EDF4FC 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .contact::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/bg-cosmic-1.png');
+  background-image: url('/bg-pastel-bokeh.png');
   background-size: cover;
-  background-position: center;
-  opacity: 0.1;
+  background-position: left center;
+  opacity: 0.3;
   pointer-events: none;
 }
 
@@ -708,19 +878,19 @@ a {
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
   padding: 40px 32px;
   text-align: center;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 12px;
   transition: all 0.3s;
-  backdrop-filter: blur(8px);
+  position: relative;
 }
 
 .contact-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(110, 198, 230, 0.2);
-  box-shadow: 0 8px 32px rgba(110, 198, 230, 0.08);
+  box-shadow: 0 8px 32px rgba(58, 124, 165, 0.1);
+  border-color: rgba(58, 124, 165, 0.2);
 }
 
 .contact-icon {
@@ -732,7 +902,7 @@ a {
 .contact-card h3 {
   font-family: var(--font-serif), Georgia, serif;
   font-size: 1rem;
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: 8px;
   letter-spacing: 0.05em;
 }
@@ -746,8 +916,7 @@ a {
 .contact-btn {
   display: inline-block;
   padding: 12px 32px;
-  background: linear-gradient(135deg, rgba(110, 198, 230, 0.2), rgba(160, 120, 200, 0.2));
-  border: 1px solid rgba(110, 198, 230, 0.3);
+  background: var(--color-primary);
   color: var(--color-white);
   font-size: 0.8rem;
   letter-spacing: 0.1em;
@@ -756,17 +925,14 @@ a {
 }
 
 .contact-btn:hover {
-  background: linear-gradient(135deg, rgba(110, 198, 230, 0.35), rgba(160, 120, 200, 0.35));
-  border-color: rgba(110, 198, 230, 0.5);
-  box-shadow: 0 0 20px rgba(110, 198, 230, 0.15);
+  background: var(--color-accent);
 }
 
-/* ===== Footer ===== */
+/* ===== Footer（ダーク） ===== */
 .footer {
   padding: 48px 0 24px;
-  background: rgba(5, 7, 20, 0.95);
+  background: var(--color-dark);
   color: rgba(255, 255, 255, 0.5);
-  border-top: 1px solid var(--color-border);
 }
 
 .footer-inner {
@@ -774,7 +940,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 32px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-logo {
@@ -802,7 +968,7 @@ a {
 }
 
 .footer-nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .footer-bottom {
@@ -822,7 +988,7 @@ a {
   left: 16px;
   padding: 12px 24px;
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: 0.85rem;
   z-index: 9999;
   border-radius: 0 0 4px 4px;
@@ -907,6 +1073,30 @@ button:focus-visible {
     gap: 24px;
   }
 
+  .programs-venn {
+    max-width: 400px;
+    height: 320px;
+  }
+
+  .venn-circle {
+    width: 210px;
+    height: 210px;
+  }
+
+  .venn-content strong {
+    font-size: 0.85rem;
+  }
+
+  .venn-desc {
+    font-size: 0.7rem;
+  }
+
+  .venn-center {
+    width: 52px;
+    height: 52px;
+    font-size: 0.75rem;
+  }
+
   .program-card {
     padding: 32px 24px;
   }
@@ -971,6 +1161,35 @@ button:focus-visible {
 
   .contact-cards {
     grid-template-columns: 1fr;
+  }
+
+  .programs-venn {
+    max-width: 300px;
+    height: 260px;
+    margin-bottom: 48px;
+  }
+
+  .venn-circle {
+    width: 170px;
+    height: 170px;
+  }
+
+  .venn-content strong {
+    font-size: 0.75rem;
+  }
+
+  .venn-label {
+    font-size: 0.6rem;
+  }
+
+  .venn-desc {
+    font-size: 0.6rem;
+  }
+
+  .venn-center {
+    width: 44px;
+    height: 44px;
+    font-size: 0.65rem;
   }
 
   .program-title {
