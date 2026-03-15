@@ -4,8 +4,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#philosophy", label: "理念" },
     { href: "#programs", label: "事業内容" },
+    { href: "#philosophy", label: "理念" },
     { href: "#about", label: "協会について" },
     { href: "#contact", label: "お問い合わせ" },
   ];

@@ -374,6 +374,237 @@ a {
   font-weight: 300;
 }
 
+/* ===== Concerns（お悩み） ===== */
+.concerns {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F0F8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.concerns::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/bg-pastel-bokeh.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.concerns-heading {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.concerns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.concern-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 32px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.concern-card:hover {
+  box-shadow: 0 8px 24px rgba(58, 124, 165, 0.08);
+  transform: translateY(-2px);
+}
+
+.concern-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.concern-text {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.concerns-message {
+  text-align: center;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  line-height: 2.2;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.concerns-cta {
+  text-align: center;
+  position: relative;
+}
+
+.concerns-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.concerns-btn:hover {
+  background: var(--color-primary);
+  box-shadow: 0 4px 20px rgba(30, 45, 74, 0.2);
+}
+
+/* ===== Voices（参加者の声） ===== */
+.voices {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #FDF8F0 0%, #F0F4FB 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.voices::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/bg-pastel-bokeh.png');
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.voice-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.3s;
+}
+
+.voice-card:hover {
+  box-shadow: 0 8px 24px rgba(58, 124, 165, 0.08);
+}
+
+.voice-card::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.4;
+}
+
+.voice-text {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 2;
+  flex: 1;
+}
+
+.voice-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.voice-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.voice-program {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+  padding: 80px 0;
+  background: var(--color-dark);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/bg-cosmic-2.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.cta-banner .container {
+  position: relative;
+}
+
+.cta-banner-text {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.cta-banner-sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.cta-banner-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  background: rgba(110, 198, 230, 0.15);
+  border: 1px solid rgba(110, 198, 230, 0.5);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.cta-banner-btn:hover {
+  background: rgba(110, 198, 230, 0.3);
+  border-color: rgba(110, 198, 230, 0.8);
+  box-shadow: 0 0 30px rgba(110, 198, 230, 0.2);
+}
+
 /* ===== パステルボケ光 共通 ===== */
 .pastel-bg {
   position: relative;
@@ -1042,6 +1273,22 @@ button:focus-visible {
 
 /* ===== Responsive: Tablet Portrait (max 768px) ===== */
 @media (max-width: 768px) {
+  .concerns-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .voices-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .concerns,
+  .voices,
+  .cta-banner {
+    padding: 64px 0;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -1074,27 +1321,39 @@ button:focus-visible {
   }
 
   .programs-venn {
-    max-width: 400px;
-    height: 320px;
+    max-width: 340px;
+    height: 280px;
   }
 
   .venn-circle {
-    width: 210px;
-    height: 210px;
+    width: 180px;
+    height: 180px;
   }
 
-  .venn-content strong {
-    font-size: 0.85rem;
+  .venn-left {
+    left: 10px;
+  }
+
+  .venn-right {
+    right: 10px;
   }
 
   .venn-desc {
+    display: none;
+  }
+
+  .venn-content strong {
     font-size: 0.7rem;
   }
 
+  .venn-label {
+    font-size: 0.6rem;
+  }
+
   .venn-center {
-    width: 52px;
-    height: 52px;
-    font-size: 0.75rem;
+    width: 48px;
+    height: 48px;
+    font-size: 0.7rem;
   }
 
   .program-card {
@@ -1151,6 +1410,23 @@ button:focus-visible {
     --header-height: 64px;
   }
 
+  .concerns-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concern-text {
+    white-space: normal;
+  }
+
+  .concerns {
+    padding: 48px 0;
+  }
+
+  .voices,
+  .cta-banner {
+    padding: 48px 0;
+  }
+
   .logo-main {
     font-size: 1.1rem;
   }
@@ -1164,32 +1440,35 @@ button:focus-visible {
   }
 
   .programs-venn {
-    max-width: 300px;
-    height: 260px;
-    margin-bottom: 48px;
+    max-width: 280px;
+    height: 240px;
   }
 
   .venn-circle {
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .venn-left {
+    left: 5px;
+  }
+
+  .venn-right {
+    right: 5px;
   }
 
   .venn-content strong {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
 
   .venn-label {
-    font-size: 0.6rem;
-  }
-
-  .venn-desc {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
   }
 
   .venn-center {
-    width: 44px;
-    height: 44px;
-    font-size: 0.65rem;
+    width: 40px;
+    height: 40px;
+    font-size: 0.6rem;
   }
 
   .program-title {
