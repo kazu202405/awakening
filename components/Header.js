@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const isHome = router.pathname === "/";
 
   const navLinks = [
-    { href: "#programs", label: "事業内容" },
-    { href: "#philosophy", label: "理念" },
-    { href: "#about", label: "協会について" },
-    { href: "#contact", label: "お問い合わせ" },
+    { href: "/#programs", label: "事業内容" },
+    { href: "/#philosophy", label: "理念" },
+    { href: "/#about", label: "協会について" },
+    { href: "/#contact", label: "お問い合わせ" },
   ];
 
   const handleNavClick = () => {
@@ -17,7 +20,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        <a href="#top" className="logo">
+        <a href="/" className="logo">
           <span className="logo-main">AWAKENING</span>
           <span className="logo-sub">アウェイクニング協会</span>
         </a>
