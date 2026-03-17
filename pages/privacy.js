@@ -6,7 +6,7 @@ export default function Privacy() {
   return (
     <>
       <Head>
-        <title>プライバシーポリシー | アウェイクニング協会</title>
+        <title>プライバシーポリシー | 日本アウェイクニング協会</title>
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -17,7 +17,7 @@ export default function Privacy() {
           <h1 className="legal-title">プライバシーポリシー</h1>
 
           <p className="legal-intro">
-            一般社団法人アウェイクニング（以下「当協会」といいます）は、
+            一般社団法人日本アウェイクニング協会（以下「当協会」といいます）は、
             個人情報取扱事業者として、お客様の個人情報の重要性を認識し、
             個人情報の保護に関する法律（個人情報保護法）その他関連法令を遵守し、
             以下のとおりプライバシーポリシーを定めます。
@@ -161,7 +161,7 @@ export default function Privacy() {
               下記までご連絡ください。
             </p>
             <p>
-              個人情報取扱事業者：一般社団法人アウェイクニング<br />
+              個人情報取扱事業者：一般社団法人日本アウェイクニング協会<br />
               個人情報保護責任者：藤原恵津子<br />
               メール：※要記載
             </p>

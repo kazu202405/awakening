@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const router = useRouter();
   const isHome = router.pathname === "/";
 
@@ -13,8 +14,15 @@ export default function Header() {
     { href: "/#contact", label: "お問い合わせ" },
   ];
 
+  const paymentLinks = [
+    { href: "/payment/nouryoku", label: "能力開花推進事業部" },
+    { href: "/payment/mirai", label: "みらいのたね学園" },
+    { href: "/payment/boshi", label: "母子共創アカデミー" },
+  ];
+
   const handleNavClick = () => {
     setMenuOpen(false);
+    setDropdownOpen(false);
   };
 
   return (
@@ -22,7 +30,7 @@ export default function Header() {
       <div className="header-inner">
         <a href="/" className="logo">
           <span className="logo-main">AWAKENING</span>
-          <span className="logo-sub">アウェイクニング協会</span>
+          <span className="logo-sub">日本アウェイクニング協会</span>
         </a>
         <button
           className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -51,6 +59,32 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          <div
+            className="nav-dropdown"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <button
+              className="nav-link nav-dropdown-trigger"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              aria-expanded={dropdownOpen}
+            >
+              お申し込み
+              <span className="dropdown-arrow">▾</span>
+            </button>
+            <div className={`dropdown-menu ${dropdownOpen ? "open" : ""}`}>
+              {paymentLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="dropdown-item"
+                  onClick={handleNavClick}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </nav>
       </div>
     </header>

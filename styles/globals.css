@@ -133,6 +133,66 @@ a {
   width: 100%;
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  font-family: inherit;
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s;
+}
+
+.nav-dropdown-trigger[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: rgba(10, 14, 39, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -961,6 +1021,23 @@ a {
   opacity: 0.7;
 }
 
+.program-payment-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 36px;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+
+.program-payment-btn:hover {
+  opacity: 0.8;
+}
+
 .detail-row {
   display: flex;
   align-items: baseline;
@@ -1471,6 +1548,36 @@ button:focus-visible {
     pointer-events: all;
   }
 
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-trigger {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 8px;
+    margin-top: 8px;
+    transform: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s, visibility 0.3s, max-height 0.3s;
+    min-width: auto;
+  }
+
+  .dropdown-menu.open {
+    opacity: 1;
+    visibility: visible;
+    max-height: 200px;
+  }
+
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -1658,4 +1765,290 @@ button:focus-visible {
   .container {
     padding: 0 16px;
   }
+}
+
+/* ===== 母子共創アカデミーページ ===== */
+.boshi-page {
+  padding-top: var(--header-height);
+}
+
+.boshi-hero {
+  background: linear-gradient(135deg, #FFF5EB 0%, #FFE8D6 50%, #FFF0E0 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.boshi-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #C0956C;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.boshi-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.boshi-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.boshi-section {
+  padding: 64px 0;
+}
+
+.boshi-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.boshi-text {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.boshi-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.boshi-card {
+  background: #fff;
+  border: 1px solid rgba(192, 149, 108, 0.2);
+  border-radius: 12px;
+  padding: 32px 24px;
+}
+
+.boshi-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #C0956C;
+  margin-bottom: 12px;
+}
+
+.boshi-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.boshi-cta-section {
+  background: #FFF9F4;
+  text-align: center;
+}
+
+.boshi-cta-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 40px;
+  background: #C0956C;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.boshi-cta-btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .boshi-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .boshi-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== 決済ページ ===== */
+.payment-page {
+  padding-top: var(--header-height);
+}
+
+.payment-header {
+  text-align: center;
+  padding: 64px 0 40px;
+}
+
+.payment-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.payment-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.payment-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.payment-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.payment-plan {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.plan-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.plan-price {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.price-amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.price-unit {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-left: 4px;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  flex: 1;
+}
+
+.plan-features li {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.plan-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2E9E8F;
+  font-weight: 700;
+}
+
+.plan-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.plan-btn:hover {
+  opacity: 0.8;
+}
+
+.plan-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.plan-btn-nouryoku {
+  background: #5A7AB5;
+}
+
+.plan-btn-mirai {
+  background: #2E9E8F;
+}
+
+.plan-btn-boshi {
+  background: #C0956C;
+}
+
+.payment-notes {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.payment-notes h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.payment-notes ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.payment-notes li {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.payment-legal-link {
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+.payment-legal-link a {
+  color: var(--color-primary);
+  text-decoration: underline;
 }

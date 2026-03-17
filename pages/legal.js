@@ -6,7 +6,7 @@ export default function Legal() {
   return (
     <>
       <Head>
-        <title>特定商取引法に基づく表記 | アウェイクニング協会</title>
+        <title>特定商取引法に基づく表記 | 日本アウェイクニング協会</title>
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -20,7 +20,7 @@ export default function Legal() {
             <tbody>
               <tr>
                 <th>販売事業者名</th>
-                <td>一般社団法人アウェイクニング</td>
+                <td>一般社団法人日本アウェイクニング協会</td>
               </tr>
               <tr>
                 <th>代表責任者</th>

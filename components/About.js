@@ -8,14 +8,14 @@ export default function About() {
         </div>
         <div className="about-grid">
           <div className="about-text">
-            <h3>一般社団法人アウェイクニング</h3>
+            <h3>一般社団法人日本アウェイクニング協会</h3>
             <p>
-              アウェイクニング協会は、「父親・母親・子供の3人一体」で社会を変えていくことを目的とした
-              一般社団法人です。
+              日本アウェイクニング協会は、和の精神性を軸に、一人ひとりの能力開花を推進し、
+              「父親・母親・子供の3人一体」で社会を変えていくことを目的とした一般社団法人です。
             </p>
             <p>
-              単なる教育機関ではなく、家庭という最小単位から日本の精神性を立て直し、
-              社会をアップデートしていくためのプラットフォームとして活動しています。
+              能力開花推進事業部・みらいのたね学園・母子共創アカデミーの3事業を通じて、
+              個人・家庭・社会の三位一体で日本の精神性を立て直し、社会をアップデートしていきます。
             </p>
             <div className="about-info">
               <div className="info-item">
@@ -35,15 +35,15 @@ export default function About() {
                 <span className="flow-number">1</span>
                 <div>
                   <strong>まずは気軽に参加</strong>
-                  <p>無料相談会やハッピーマザーズクラブで、お気軽にご参加ください</p>
+                  <p>セミナーや無料相談会で、お気軽にご参加ください</p>
                 </div>
               </div>
               <div className="flow-arrow">↓</div>
               <div className="flow-step">
                 <span className="flow-number">2</span>
                 <div>
-                  <strong>講座・学園で学ぶ</strong>
-                  <p>母親講座やみらいのたね学園で、親子で一緒に成長していきます</p>
+                  <strong>講座・研修で学ぶ</strong>
+                  <p>各事業部の講座・研修を通じて、本来の力を引き出していきます</p>
                 </div>
               </div>
               <div className="flow-arrow">↓</div>

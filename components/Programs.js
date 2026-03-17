@@ -16,6 +16,7 @@ export default function Programs() {
       color: "#EEF2FA",
       accent: "#5A7AB5",
       link: "https://coach-fiore.com/",
+      paymentLink: "/payment/nouryoku",
     },
     {
       number: "02",
@@ -33,6 +34,7 @@ export default function Programs() {
       color: "#E8F5F2",
       accent: "#2E9E8F",
       link: "https://lp.mirainotanegakuen.com/",
+      paymentLink: "/payment/mirai",
     },
     {
       number: "03",
@@ -49,6 +51,8 @@ export default function Programs() {
       ],
       color: "#FFF5EB",
       accent: "#C0956C",
+      link: "/boshi",
+      paymentLink: "/payment/boshi",
     },
   ];
 
@@ -106,7 +110,11 @@ export default function Programs() {
               </div>
               {program.link ? (
                 <h3 className="program-title">
-                  <a href={program.link} target="_blank" rel="noopener noreferrer" className="program-title-link">
+                  <a
+                    href={program.link}
+                    {...(program.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="program-title-link"
+                  >
                     {program.title}
                   </a>
                 </h3>
@@ -128,8 +136,7 @@ export default function Programs() {
                 {program.link && (
                   <a
                     href={program.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(program.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="program-link"
                     style={{ color: program.accent }}
                   >
@@ -137,6 +144,15 @@ export default function Programs() {
                   </a>
                 )}
               </div>
+              {program.paymentLink && (
+                <a
+                  href={program.paymentLink}
+                  className="program-payment-btn"
+                  style={{ backgroundColor: program.accent }}
+                >
+                  お申し込みはこちら
+                </a>
+              )}
             </article>
           ))}
         </div>

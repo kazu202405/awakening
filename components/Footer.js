@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="footer-inner">
           <div className="footer-brand">
             <a href="/" className="footer-logo">AWAKENING</a>
-            <p className="footer-tagline">一般社団法人アウェイクニング</p>
+            <p className="footer-tagline">一般社団法人日本アウェイクニング協会</p>
           </div>
           <nav className="footer-nav" aria-label="フッターナビゲーション">
             <a href="/#programs">事業内容</a>
@@ -19,7 +19,7 @@ export default function Footer() {
             <a href="/legal">特定商取引法に基づく表記</a>
             <a href="/privacy">プライバシーポリシー</a>
           </div>
-          <p>&copy; 2026 一般社団法人アウェイクニング All Rights Reserved.</p>
+          <p>&copy; 2026 一般社団法人日本アウェイクニング協会 All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -17,6 +17,16 @@ export default function Contact() {
         <div className="contact-cards">
           <div className="contact-card">
             <span className="contact-icon" role="img" aria-hidden="true">
+              &#x1F4BC;
+            </span>
+            <h3>能力開花推進事業部</h3>
+            <p>セミナー・研修・講演会のお申し込み</p>
+            <a href="#contact" className="contact-btn">
+              お問い合わせ
+            </a>
+          </div>
+          <div className="contact-card">
+            <span className="contact-icon" role="img" aria-hidden="true">
               &#x1F476;
             </span>
             <h3>みらいのたね学園について</h3>
@@ -31,16 +41,6 @@ export default function Contact() {
             </span>
             <h3>ハッピーマザーズクラブ / 母親講座</h3>
             <p>無料相談会・講座のお申し込み</p>
-            <a href="#contact" className="contact-btn">
-              お問い合わせ
-            </a>
-          </div>
-          <div className="contact-card">
-            <span className="contact-icon" role="img" aria-hidden="true">
-              &#x1F4BC;
-            </span>
-            <h3>能力開花推進事業部</h3>
-            <p>セミナー・研修・講演会のお申し込み</p>
             <a href="#contact" className="contact-btn">
               お問い合わせ
             </a>
