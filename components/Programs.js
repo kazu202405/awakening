@@ -2,6 +2,23 @@ export default function Programs() {
   const programs = [
     {
       number: "01",
+      label: "For Society",
+      title: "能力開花推進事業部（コーチ・フィオーレ）",
+      subtitle: "和の精神性を軸にしたセミナー・研修・講演会",
+      description:
+        "父親・一般社会人・経営者を対象とした、和の精神性を軸にしたセミナー・研修・講演会。組織変革や人材育成、日本の精神性に基づいたコミュニケーション力向上を提供します。",
+      details: [
+        { label: "対象", value: "父親・一般社会人・経営者" },
+        { label: "内容", value: "セミナー・研修・講演会" },
+        { label: "定例セミナー", value: "京阪神で月1回" },
+        { label: "参加費", value: "6,000〜8,000円" },
+      ],
+      color: "#EEF2FA",
+      accent: "#5A7AB5",
+      link: "https://coach-fiore.com/",
+    },
+    {
+      number: "02",
       label: "For Children",
       title: "みらいのたね学園",
       subtitle: "次代を創る子どもの育成",
@@ -15,9 +32,10 @@ export default function Programs() {
       ],
       color: "#E8F5F2",
       accent: "#2E9E8F",
+      link: "https://lp.mirainotanegakuen.com/",
     },
     {
-      number: "02",
+      number: "03",
       label: "For Mothers",
       title: "母子共創アカデミー事業部",
       subtitle: "ハッピーマザーズクラブ / 母親講座",
@@ -31,22 +49,6 @@ export default function Programs() {
       ],
       color: "#FFF5EB",
       accent: "#C0956C",
-    },
-    {
-      number: "03",
-      label: "For Society",
-      title: "能力開花推進事業部",
-      subtitle: "和の精神性を軸にしたセミナー・研修・講演会",
-      description:
-        "父親・一般社会人・経営者を対象とした、和の精神性を軸にしたセミナー・研修・講演会。組織変革や人材育成、日本の精神性に基づいたコミュニケーション力向上を提供します。",
-      details: [
-        { label: "対象", value: "父親・一般社会人・経営者" },
-        { label: "内容", value: "セミナー・研修・講演会" },
-        { label: "定例セミナー", value: "京阪神で月1回" },
-        { label: "参加費", value: "6,000〜8,000円" },
-      ],
-      color: "#EEF2FA",
-      accent: "#5A7AB5",
     },
   ];
 
@@ -74,14 +76,14 @@ export default function Programs() {
           <div className="venn-circle venn-left">
             <div className="venn-content">
               <span className="venn-label">子ども</span>
-              <strong>みらいのたね学園</strong>
+              <strong>みらいのたね</strong>
               <span className="venn-desc">次代を創る子どもの育成</span>
             </div>
           </div>
           <div className="venn-circle venn-right">
             <div className="venn-content">
               <span className="venn-label">母親</span>
-              <strong>母子共創アカデミー</strong>
+              <strong>母子共創アカデミー事業部</strong>
               <span className="venn-desc">能力開花・講座・カウンセリング</span>
             </div>
           </div>
@@ -102,7 +104,15 @@ export default function Programs() {
                 </span>
                 <span className="program-label">{program.label}</span>
               </div>
-              <h3 className="program-title">{program.title}</h3>
+              {program.link ? (
+                <h3 className="program-title">
+                  <a href={program.link} target="_blank" rel="noopener noreferrer" className="program-title-link">
+                    {program.title}
+                  </a>
+                </h3>
+              ) : (
+                <h3 className="program-title">{program.title}</h3>
+              )}
               <p className="program-subtitle">{program.subtitle}</p>
               <p className="program-description">{program.description}</p>
               <div
@@ -115,6 +125,17 @@ export default function Programs() {
                     <span className="detail-value">{detail.value}</span>
                   </div>
                 ))}
+                {program.link && (
+                  <a
+                    href={program.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="program-link"
+                    style={{ color: program.accent }}
+                  >
+                    詳しくはこちら →
+                  </a>
+                )}
               </div>
             </article>
           ))}

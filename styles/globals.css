@@ -187,8 +187,7 @@ a {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 30% 50%, rgba(110, 198, 230, 0.1) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 30%, rgba(160, 120, 200, 0.1) 0%, transparent 50%),
-              linear-gradient(to bottom, rgba(10, 14, 39, 0.3) 0%, rgba(10, 14, 39, 0.6) 100%);
+              radial-gradient(ellipse at 70% 30%, rgba(160, 120, 200, 0.1) 0%, transparent 50%);
 }
 
 .hero-stars {
@@ -403,7 +402,7 @@ a {
 
 .concerns-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 48px;
   position: relative;
@@ -936,6 +935,30 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+}
+
+.program-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.program-title-link:hover {
+  opacity: 0.7;
+}
+
+.program-link {
+  display: inline-block;
+  margin-top: 16px;
+  grid-column: 1 / -1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.program-link:hover {
+  opacity: 0.7;
 }
 
 .detail-row {

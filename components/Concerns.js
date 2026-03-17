@@ -1,20 +1,16 @@
 export default function Concerns() {
   const concerns = [
     {
-      icon: "\u{1F3E0}",
-      text: "子どもが学校に行けなくなり、\nこの先どうすればいいか分からない",
+      icon: "\u{1F331}",
+      text: "自分の本来の力を発揮できていない、\nもっと成長したいと感じている",
     },
     {
-      icon: "\u{1F494}",
-      text: "子育てに自信がなくなり、\n自分を責めてしまう",
-    },
-    {
-      icon: "\u{1F465}",
-      text: "周りに相談できる人がいない、\n孤独を感じている",
+      icon: "\u{1F3E2}",
+      text: "組織のコミュニケーションや\n人材育成に課題を感じている",
     },
     {
       icon: "\u{1F50D}",
-      text: "子どもの本来の力を\n引き出してあげたい",
+      text: "日本の精神性を活かした\n自己変革・組織変革を学びたい",
     },
   ];
 
@@ -37,8 +33,8 @@ export default function Concerns() {
           ))}
         </div>
         <p className="concerns-message">
-          ひとりで抱え込まないでください。<br />
-          同じ想いを持つ仲間と、一緒に歩んでいける場所があります。
+          あなたの中に眠る可能性を、共に開花させましょう。<br />
+          和の精神性を軸に、本来の力を引き出す場がここにあります。
         </p>
         <div className="concerns-cta">
           <a href="#contact" className="concerns-btn">
