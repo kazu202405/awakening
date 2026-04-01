@@ -14,9 +14,6 @@ export default function Hero() {
           競争から共創へ。和の精神で可能性を開く。<br />
           子ども・母親・家庭から、本来の自分が目覚める社会へ。
         </p>
-        <a href="#contact" className="hero-cta">
-          無料相談会に参加する
-        </a>
       </div>
       <div className="hero-scroll">
         <span>Scroll</span>

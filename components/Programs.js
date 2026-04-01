@@ -17,6 +17,7 @@ export default function Programs() {
       accent: "#5A7AB5",
       link: "https://coach-fiore.com/",
       paymentLink: "/payment/nouryoku",
+      image: "/bg-cosmic-1.png",
     },
     {
       number: "02",
@@ -35,6 +36,7 @@ export default function Programs() {
       accent: "#2E9E8F",
       link: "https://lp.mirainotanegakuen.com/",
       paymentLink: "/payment/mirai",
+      image: "/bg-cosmic-2.png",
     },
     {
       number: "03",
@@ -53,6 +55,7 @@ export default function Programs() {
       accent: "#C0956C",
       link: "/boshi",
       paymentLink: "/payment/boshi",
+      image: "/bg-cosmic-3.png",
     },
   ];
 
@@ -99,60 +102,68 @@ export default function Programs() {
         <div className="programs-list">
           {programs.map((program) => (
             <article key={program.number} className="program-card">
-              <div className="program-header">
-                <span
-                  className="program-number"
-                  style={{ color: program.accent }}
-                >
-                  {program.number}
-                </span>
-                <span className="program-label">{program.label}</span>
-              </div>
-              {program.link ? (
-                <h3 className="program-title">
-                  <a
-                    href={program.link}
-                    {...(program.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="program-title-link"
-                  >
-                    {program.title}
-                  </a>
-                </h3>
-              ) : (
-                <h3 className="program-title">{program.title}</h3>
-              )}
-              <p className="program-subtitle">{program.subtitle}</p>
-              <p className="program-description">{program.description}</p>
-              <div
-                className="program-details"
-                style={{ backgroundColor: program.color }}
-              >
-                {program.details.map((detail, i) => (
-                  <div key={i} className="detail-row">
-                    <span className="detail-label">{detail.label}</span>
-                    <span className="detail-value">{detail.value}</span>
+              <div className="program-card-inner">
+                <div className="program-card-text">
+                  <div className="program-header">
+                    <span
+                      className="program-number"
+                      style={{ color: program.accent }}
+                    >
+                      {program.number}
+                    </span>
+                    <span className="program-label">{program.label}</span>
                   </div>
-                ))}
-                {program.link && (
-                  <a
-                    href={program.link}
-                    {...(program.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="program-link"
-                    style={{ color: program.accent }}
+                  {program.link ? (
+                    <h3 className="program-title">
+                      <a
+                        href={program.link}
+                        {...(program.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        className="program-title-link"
+                      >
+                        {program.title}
+                      </a>
+                    </h3>
+                  ) : (
+                    <h3 className="program-title">{program.title}</h3>
+                  )}
+                  <p className="program-subtitle">{program.subtitle}</p>
+                  <p className="program-description">{program.description}</p>
+                  <div
+                    className="program-details"
+                    style={{ backgroundColor: program.color }}
                   >
-                    詳しくはこちら →
-                  </a>
-                )}
+                    {program.details.map((detail, i) => (
+                      <div key={i} className="detail-row">
+                        <span className="detail-label">{detail.label}</span>
+                        <span className="detail-value">{detail.value}</span>
+                      </div>
+                    ))}
+                    {program.link && (
+                      <a
+                        href={program.link}
+                        {...(program.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        className="program-link"
+                        style={{ color: program.accent }}
+                      >
+                        詳しくはこちら →
+                      </a>
+                    )}
+                  </div>
+                  {program.paymentLink && (
+                    <a
+                      href={program.paymentLink}
+                      className="program-payment-btn"
+                      style={{ backgroundColor: program.accent }}
+                    >
+                      お問い合わせ
+                    </a>
+                  )}
+                </div>
+                <div
+                  className="program-card-image"
+                  style={{ backgroundImage: `url(${program.image})`, backgroundColor: program.color }}
+                ></div>
               </div>
-              {program.paymentLink && (
-                <a
-                  href={program.paymentLink}
-                  className="program-payment-btn"
-                  style={{ backgroundColor: program.accent }}
-                >
-                  お申し込みはこちら
-                </a>
-              )}
             </article>
           ))}
         </div>

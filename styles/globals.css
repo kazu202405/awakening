@@ -933,15 +933,31 @@ a {
 .program-card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(8px);
-  padding: 48px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 12px;
   transition: all 0.3s;
   position: relative;
+  overflow: hidden;
+  padding: 0;
 }
 
 .program-card:hover {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.program-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  min-height: 400px;
+}
+
+.program-card-text {
+  padding: 48px;
+}
+
+.program-card-image {
+  background-size: cover;
+  background-position: center;
 }
 
 .program-header {
@@ -1077,10 +1093,8 @@ a {
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .about-text h3 {
@@ -1180,6 +1194,44 @@ a {
   text-align: center;
   color: var(--color-accent);
   font-size: 1.2rem;
+}
+
+/* ===== About Payment ===== */
+.about-payment {
+  max-width: 720px;
+  margin: 48px auto 0;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.about-payment h4 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.about-payment p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin: 4px 0;
+  line-height: 1.8;
+}
+
+.about-payment-links {
+  margin-top: 16px !important;
+}
+
+.about-payment-links a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+
+.about-payment-links a:hover {
+  opacity: 0.7;
 }
 
 /* ===== Contact ===== */
@@ -1476,8 +1528,12 @@ button:focus-visible {
     gap: 32px;
   }
 
-  .program-card {
+  .program-card-text {
     padding: 40px 32px;
+  }
+
+  .program-card-inner {
+    grid-template-columns: 1fr 35%;
   }
 
   .about-grid {
@@ -1619,8 +1675,16 @@ button:focus-visible {
     font-size: 0.7rem;
   }
 
-  .program-card {
+  .program-card-text {
     padding: 32px 24px;
+  }
+
+  .program-card-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card-image {
+    min-height: 200px;
   }
 
   .program-details {
@@ -1628,8 +1692,7 @@ button:focus-visible {
   }
 
   .about-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    max-width: 100%;
   }
 
   .contact-cards {

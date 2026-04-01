@@ -28,34 +28,18 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="about-strategy">
-            <h4>ご参加の流れ</h4>
-            <div className="strategy-flow">
-              <div className="flow-step">
-                <span className="flow-number">1</span>
-                <div>
-                  <strong>まずは気軽に参加</strong>
-                  <p>セミナーや無料相談会で、お気軽にご参加ください</p>
-                </div>
-              </div>
-              <div className="flow-arrow">↓</div>
-              <div className="flow-step">
-                <span className="flow-number">2</span>
-                <div>
-                  <strong>講座・研修で学ぶ</strong>
-                  <p>各事業部の講座・研修を通じて、本来の力を引き出していきます</p>
-                </div>
-              </div>
-              <div className="flow-arrow">↓</div>
-              <div className="flow-step">
-                <span className="flow-number">3</span>
-                <div>
-                  <strong>お仕事にする</strong>
-                  <p>ご希望の方は認定講師として、学びを活かしたお仕事をしていただけます</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="about-payment">
+          <h4>お支払いについて</h4>
+          <p>お支払い方法：クレジットカード決済（VISA / Mastercard / JCB / AMEX）</p>
+          <p>決済はUnivaPayによる安全なカード決済システムを利用しています</p>
+          <p>分割払いにも対応しております</p>
+          <p>クレジットカード決済はお申込み時に即時決済となります</p>
+          <p className="about-payment-links">
+            <a href="/legal">特定商取引法に基づく表記</a>
+            <span> ／ </span>
+            <a href="/privacy">プライバシーポリシー</a>
+          </p>
         </div>
       </div>
     </section>
