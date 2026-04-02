@@ -6,7 +6,7 @@ export default function Concerns() {
     },
     {
       icon: "\u{1F3E2}",
-      text: "組織のコミュニケーションや\n人材育成に課題を感じている",
+      text: "組織のコミュニケーションや\n人財育成に課題を感じている",
     },
     {
       icon: "\u{1F50D}",

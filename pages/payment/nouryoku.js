@@ -34,7 +34,7 @@ export default function PaymentNouryoku() {
                 </div>
                 <ul className="plan-features">
                   <li>和の精神性に基づいたコミュニケーション力向上</li>
-                  <li>組織変革・人材育成のヒント</li>
+                  <li>組織変革・人財育成のヒント</li>
                   <li>参加者同士のネットワーキング</li>
                 </ul>
                 <UnivaPayButton
