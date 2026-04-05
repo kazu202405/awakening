@@ -11,8 +11,8 @@ export default function Hero() {
           <span className="hero-title-ja">一般社団法人日本アウェイクニング協会</span>
         </h1>
         <p className="hero-description">
-          競争から共創へ。和の精神で可能性を開く。<br />
-          子ども・母親・家庭から、本来の自分が目覚める社会へ。
+          和の精神をベースに、互いを尊重し活かし合う<br />
+          共創社会を目指しています
         </p>
       </div>
       <div className="hero-scroll">
