@@ -1,4 +1,19 @@
 export default function About() {
+  const books = [
+    "幸せを叶えるコミュニケーション",
+    "輝く女性の生き方100",
+    "キャリアマザーズ",
+    "見つかるマイセラピスト",
+  ];
+
+  const mediaList = [
+    "京都テレビ",
+    "岡山テレビ",
+    "朝日新聞",
+    "サンケイリビング新聞",
+    "FMラジオ",
+  ];
+
   return (
     <section id="about" className="about">
       <div className="container">
@@ -27,6 +42,41 @@ export default function About() {
             </p>
           </div>
         </div>
+
+        <div className="about-credibility">
+          <div className="about-credibility-grid">
+            <div className="about-credibility-block">
+              <span className="about-credibility-label">Publications</span>
+              <h4 className="about-credibility-title">著書</h4>
+              <ul className="about-credibility-books">
+                {books.map((b) => (
+                  <li key={b}>
+                    <span className="about-credibility-book-mark" aria-hidden="true">『</span>
+                    {b}
+                    <span className="about-credibility-book-mark" aria-hidden="true">』</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="about-credibility-block">
+              <span className="about-credibility-label">Media</span>
+              <h4 className="about-credibility-title">メディア出演</h4>
+              <ul className="about-credibility-media">
+                {mediaList.map((m) => (
+                  <li key={m}>{m}</li>
+                ))}
+              </ul>
+              <p className="about-credibility-media-note">ほか</p>
+            </div>
+          </div>
+          <a href="/training" className="about-credibility-link">
+            <span className="about-credibility-link-text">
+              法人研修・講演・コーチングの実績はこちら
+            </span>
+            <span className="about-credibility-link-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
         <div className="about-payment">
           <span className="about-payment-label">Payment</span>
           <h4>お支払いについて</h4>

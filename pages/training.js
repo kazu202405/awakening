@@ -83,9 +83,107 @@ export default function Training() {
   ];
 
   const credentials = [
-    { cat: "NLP", items: ["米国NLP協会認定トレーナー", "NLPコーチ＆カウンセラー"] },
-    { cat: "Brain Science", items: ["エマジェネティクストレーナー課程修了", "アクティブブレインインストラクター"] },
-    { cat: "Therapy", items: ["ヒプノセラピスト"] },
+    { cat: "Education", items: ["小学校教諭二種免許"] },
+    {
+      cat: "NLP",
+      items: [
+        "米国NLP協会公認トレーナー",
+        "NLPコーチ＆カウンセラー",
+        "NLPメタプログラム（言語&行動分析）プラクティショナー",
+      ],
+    },
+    {
+      cat: "Brain Science",
+      items: [
+        "エマジェネティクス（思考&行動分析）トレーナー課程修了",
+        "アクティブブレインインストラクター",
+      ],
+    },
+    { cat: "Coaching", items: ["CTP（コーチ養成講座）全課程修了"] },
+    {
+      cat: "Therapy",
+      items: [
+        "ヒプノセラピスト",
+        "レイキセラピスト",
+        "ミラクルタッピングインストラクター",
+      ],
+    },
+  ];
+
+  const trackRecord = [
+    {
+      cat: "Government",
+      title: "官公庁・自治体",
+      items: [
+        "東京都杉並区役所",
+        "長野市広域連合",
+        "兵庫県男女共同参画センター",
+        "明石市ファミリーサポート",
+        "加古川市男女共同参画センター",
+        "姫路市男女共同参画センター",
+        "ハローワーク職業訓練",
+        "岐阜県・兵庫県職業訓練支援センター職員研修",
+      ],
+    },
+    {
+      cat: "Education",
+      title: "教育機関",
+      items: [
+        "神戸大学付属明石幼稚園",
+        "名古屋市立中学校教職員研修",
+        "明石市教職員研修",
+        "大阪市幼稚園保育園研修",
+        "大阪市教育講演会",
+        "神戸市西区・明石市小中学校PTA",
+        "河合塾",
+        "YMCA",
+        "オンラインフリースクール「みんなの学園」",
+      ],
+    },
+    {
+      cat: "Medical",
+      title: "医療機関",
+      items: [
+        "京都府立医科大学",
+        "京都府立病院",
+        "米子市労災病院",
+        "姫路厚生病院",
+        "播磨大塩病院",
+        "兵庫県西播磨地区看護部長研修",
+        "兵庫県精神科病院協会看護部会研修",
+        "世界健康医術学会",
+      ],
+    },
+    {
+      cat: "Corporate",
+      title: "企業・団体",
+      items: [
+        "アクサ生命",
+        "日本生命",
+        "株式会社マルハン",
+        "大阪PHP経営者友の会",
+        "中部四国地区美容関係経営者研修",
+        "プロカウンセリング協会",
+        "クラブジャパン",
+      ],
+    },
+  ];
+
+  const media = [
+    "京都テレビ",
+    "岡山テレビ",
+    "FMラジオ",
+    "朝日新聞",
+    "サンケイリビング新聞",
+    "国際グラフ",
+    "兵庫の社長TV",
+  ];
+
+  const books = [
+    "幸せを叶えるコミュニケーション",
+    "輝く女性の生き方100",
+    "キャリアマザーズ",
+    "見つかるマイセラピスト",
   ];
 
   return (
@@ -249,7 +347,71 @@ export default function Training() {
                       </div>
                     ))}
                   </div>
+                  <p className="training-trainer-credentials-note">他、海外での認定資格多数</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Track Record */}
+        <section className="training-section training-track-record">
+          <div className="container">
+            <div className="training-section-head">
+              <span className="training-section-label">Track Record</span>
+              <h2 className="training-section-title">主な研修・講演実績</h2>
+              <p className="training-section-sub">
+                官公庁・教育機関・医療機関・企業団体まで、20年以上にわたり多様な現場で登壇しています。
+              </p>
+            </div>
+            <div className="training-track-grid">
+              {trackRecord.map((g) => (
+                <article key={g.cat} className="training-track-card">
+                  <div className="training-track-head">
+                    <span className="training-track-cat">{g.cat}</span>
+                    <h3 className="training-track-title">{g.title}</h3>
+                  </div>
+                  <ul className="training-track-list">
+                    {g.items.map((it) => (
+                      <li key={it}>{it}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+            <p className="training-track-note">※ 敬称略／順不同・一部抜粋</p>
+          </div>
+        </section>
+
+        {/* Media & Publications */}
+        <section className="training-section training-media">
+          <div className="container">
+            <div className="training-section-head">
+              <span className="training-section-label">Media &amp; Publications</span>
+              <h2 className="training-section-title">メディア出演・著書</h2>
+            </div>
+            <div className="training-media-grid">
+              <div className="training-media-block">
+                <span className="training-media-cat">Media</span>
+                <h3 className="training-media-title">メディア出演</h3>
+                <ul className="training-media-list">
+                  {media.map((it) => (
+                    <li key={it}>{it}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="training-media-block">
+                <span className="training-media-cat">Publications</span>
+                <h3 className="training-media-title">著書</h3>
+                <ul className="training-media-list training-media-list-books">
+                  {books.map((it) => (
+                    <li key={it}>
+                      <span className="training-media-book-mark" aria-hidden="true">『</span>
+                      {it}
+                      <span className="training-media-book-mark" aria-hidden="true">』</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
