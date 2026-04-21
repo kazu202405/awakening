@@ -69,6 +69,25 @@ export default function Training() {
     { step: "05", label: "Follow-up", duration: "継続支援", title: "フォローアップ", desc: "実施後の振り返りミーティングと、現場定着に向けた継続支援を行います。" },
   ];
 
+  const approach = [
+    { num: "I", title: "和の精神性 × 脳科学", desc: "日本古来の精神性と、NLP・エマジェネティクスなど最新の脳科学・心理学を融合。理念と科学の両輪で、人と組織の本質的な変化を生み出します。" },
+    { num: "II", title: "共創型人財開発", desc: "トップダウンの教育ではなく、互いの強みを引き出し活かし合う共創型のプロセスを設計。現場が主体的に動き続ける組織文化を育てます。" },
+    { num: "III", title: "在り方からの変革", desc: "スキルだけでなく、リーダーや現場の「在り方」に働きかけます。在り方が変わることで、行動・関係性・成果が連鎖的に変わります。" },
+  ];
+
+  const pricingFactors = [
+    { label: "Scale", title: "受講規模", desc: "5名のチームから、全社員研修まで対応可能。" },
+    { label: "Duration", title: "期間・回数", desc: "単発講演から、複数年にわたる伴走まで設計。" },
+    { label: "Customization", title: "カスタマイズ度", desc: "標準プログラムから、完全オーダーメイドまで。" },
+    { label: "Format", title: "実施形式", desc: "対面・オンライン・ハイブリッドに柔軟対応。" },
+  ];
+
+  const credentials = [
+    { cat: "NLP", items: ["米国NLP協会認定トレーナー", "NLPコーチ＆カウンセラー"] },
+    { cat: "Brain Science", items: ["エマジェネティクストレーナー課程修了", "アクティブブレインインストラクター"] },
+    { cat: "Therapy", items: ["ヒプノセラピスト"] },
+  ];
+
   return (
     <>
       <Head>
@@ -94,6 +113,10 @@ export default function Training() {
         {/* Hero */}
         <section className="training-hero">
           <div className="container">
+            <div className="training-hero-mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
             <span className="training-eyebrow">For Corporate</span>
             <h1 className="training-hero-title">
               和の精神性で、<br />組織を強くする。
@@ -143,20 +166,16 @@ export default function Training() {
             <div className="training-section-head">
               <span className="training-section-label">Approach</span>
               <h2 className="training-section-title">私たちのアプローチ</h2>
+              <p className="training-section-sub">他にはない、3つの軸で人と組織の可能性を開きます。</p>
             </div>
             <div className="training-approach-grid">
-              <div className="training-approach-item">
-                <h3>和の精神性 × 脳科学</h3>
-                <p>日本古来の精神性と、NLP・エマジェネティクスなど最新の脳科学・心理学を融合。理念と科学の両輪で、人と組織の本質的な変化を生み出します。</p>
-              </div>
-              <div className="training-approach-item">
-                <h3>共創型人財開発</h3>
-                <p>トップダウンの教育ではなく、互いの強みを引き出し活かし合う共創型のプロセスを設計。現場が主体的に動き続ける組織文化を育てます。</p>
-              </div>
-              <div className="training-approach-item">
-                <h3>在り方からの変革</h3>
-                <p>スキルだけでなく、リーダーや現場の「在り方」に働きかけます。在り方が変わることで、行動・関係性・成果が連鎖的に変わります。</p>
-              </div>
+              {approach.map((a) => (
+                <article key={a.num} className="training-approach-card">
+                  <span className="training-approach-num" aria-hidden="true">{a.num}</span>
+                  <h3 className="training-approach-title">{a.title}</h3>
+                  <p className="training-approach-desc">{a.desc}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -202,23 +221,35 @@ export default function Training() {
         <section className="training-section training-trainer">
           <div className="container">
             <div className="training-trainer-inner">
-              <div className="training-trainer-image">
-                <img src="/representative.png" alt="藤原恵津子" />
+              <div className="training-trainer-image-wrap">
+                <div className="training-trainer-image">
+                  <img src="/representative.png" alt="藤原恵津子" />
+                </div>
+                <span className="training-trainer-image-frame" aria-hidden="true"></span>
               </div>
               <div className="training-trainer-text">
                 <span className="training-section-label">Trainer</span>
-                <h2 className="training-section-title">藤原 恵津子</h2>
-                <p className="training-trainer-role">可能性開花トレーナー / 一般社団法人日本アウェイクニング協会</p>
+                <h2 className="training-trainer-name">藤原 恵津子</h2>
+                <p className="training-trainer-name-en">Etsuko Fujiwara</p>
+                <p className="training-trainer-role">可能性開花トレーナー<span className="training-trainer-divider">／</span>一般社団法人日本アウェイクニング協会</p>
                 <p className="training-trainer-bio">
                   専業主婦18年を経て起業し、海外へのビジネス展開も実現。脳科学・心理学・和の精神性を融合した独自のアプローチで、経営者・組織・個人の能力開花を支援。著書『幸せを叶えるコミュニケーション』。
                 </p>
-                <ul className="training-trainer-credentials">
-                  <li>米国NLP協会認定トレーナー</li>
-                  <li>NLPコーチ＆カウンセラー</li>
-                  <li>エマジェネティクストレーナー課程修了</li>
-                  <li>アクティブブレインインストラクター</li>
-                  <li>ヒプノセラピスト</li>
-                </ul>
+                <div className="training-trainer-credentials-block">
+                  <h3 className="training-trainer-credentials-label">Certifications</h3>
+                  <div className="training-trainer-credentials-grid">
+                    {credentials.map((g) => (
+                      <div key={g.cat} className="training-trainer-credentials-group">
+                        <span className="training-trainer-credentials-cat">{g.cat}</span>
+                        <ul>
+                          {g.items.map((it) => (
+                            <li key={it}>{it}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -258,9 +289,21 @@ export default function Training() {
               <span className="training-section-label">Pricing</span>
               <h2 className="training-section-title">料金について</h2>
               <p className="training-section-sub">
-                内容・期間・規模により個別お見積りいたします。<br />
-                オンライン・対面どちらも対応可能です。お気軽にご相談ください。
+                内容・期間・規模に応じて、貴社専用の見積書をご提案します。
               </p>
+            </div>
+            <div className="training-pricing-grid">
+              {pricingFactors.map((p) => (
+                <div key={p.label} className="training-pricing-factor">
+                  <span className="training-pricing-factor-label">{p.label}</span>
+                  <h3 className="training-pricing-factor-title">{p.title}</h3>
+                  <p className="training-pricing-factor-desc">{p.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="training-pricing-note">
+              <span className="training-pricing-note-mark" aria-hidden="true">●</span>
+              <p>ヒアリング・ご提案・見積書のご提出まで、すべて<strong>無料</strong>でご対応いたします。</p>
             </div>
           </div>
         </section>
@@ -268,14 +311,20 @@ export default function Training() {
         {/* Contact CTA */}
         <section id="training-contact" className="training-cta">
           <div className="container">
-            <h2 className="training-cta-title">まずは無料でご相談ください</h2>
+            <span className="training-cta-mark" aria-hidden="true"></span>
+            <span className="training-cta-eyebrow">Get Started</span>
+            <h2 className="training-cta-title">
+              まずは無料で、<br />ご相談ください。
+            </h2>
             <p className="training-cta-text">
               貴社の課題やご要望をお伺いし、最適なプログラムをご提案します。<br />
-              ヒアリングは無料です。
+              ヒアリング・お見積もりは無料です。
             </p>
-            <a href="/#contact" className="training-btn-primary training-btn-large">
+            <a href="/payment/nouryoku" className="training-btn-primary training-btn-large">
               お問い合わせはこちら
+              <span aria-hidden="true">→</span>
             </a>
+            <p className="training-cta-meta">通常24時間以内にご返信いたします</p>
           </div>
         </section>
       </main>
