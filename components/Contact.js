@@ -1,4 +1,28 @@
 export default function Contact() {
+  const cards = [
+    {
+      num: "01",
+      label: "For Society",
+      title: "能力開花推進事業部",
+      desc: "セミナー・研修・講演会のお申し込み",
+      href: "/training",
+    },
+    {
+      num: "02",
+      label: "For Children",
+      title: "みらいのたね学園について",
+      desc: "入学相談・体験のお申し込み",
+      href: "/payment/mirai",
+    },
+    {
+      num: "03",
+      label: "For Mothers",
+      title: "ハッピーマザーズクラブ / 母親講座",
+      desc: "無料相談会・講座のお申し込み",
+      href: "/payment/boshi",
+    },
+  ];
+
   return (
     <section id="contact" className="contact">
       <div className="sparkles" aria-hidden="true">
@@ -15,36 +39,17 @@ export default function Contact() {
           </p>
         </div>
         <div className="contact-cards">
-          <div className="contact-card">
-            <span className="contact-icon" role="img" aria-hidden="true">
-              &#x1F4BC;
-            </span>
-            <h3>能力開花推進事業部</h3>
-            <p>セミナー・研修・講演会のお申し込み</p>
-            <a href="#contact" className="contact-btn">
-              お問い合わせ
-            </a>
-          </div>
-          <div className="contact-card">
-            <span className="contact-icon" role="img" aria-hidden="true">
-              &#x1F476;
-            </span>
-            <h3>みらいのたね学園について</h3>
-            <p>入学相談・体験のお申し込み</p>
-            <a href="#contact" className="contact-btn">
-              お問い合わせ
-            </a>
-          </div>
-          <div className="contact-card">
-            <span className="contact-icon" role="img" aria-hidden="true">
-              &#x1F469;
-            </span>
-            <h3>ハッピーマザーズクラブ / 母親講座</h3>
-            <p>無料相談会・講座のお申し込み</p>
-            <a href="#contact" className="contact-btn">
-              お問い合わせ
-            </a>
-          </div>
+          {cards.map((c) => (
+            <div key={c.num} className="contact-card">
+              <span className="contact-num" aria-hidden="true">{c.num}</span>
+              <span className="contact-cat">{c.label}</span>
+              <h3>{c.title}</h3>
+              <p>{c.desc}</p>
+              <a href={c.href} className="contact-btn">
+                お問い合わせ
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

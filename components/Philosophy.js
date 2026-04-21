@@ -1,19 +1,19 @@
 export default function Philosophy() {
   const values = [
     {
-      icon: "\u{1F331}",
+      num: "I",
       title: "成長",
       description:
         "家族一人ひとりが本来持っている力を引き出し、共に成長する場を創ります。",
     },
     {
-      icon: "\u{1F1EF}\u{1F1F5}",
+      num: "II",
       title: "精神性",
       description:
         "脳科学や心理学に加え、日本の精神性をベースとした「在り方」を大切にします。",
     },
     {
-      icon: "\u{1F504}",
+      num: "III",
       title: "変容",
       description:
         "家庭という最小単位から、社会全体のアップデートを目指します。",
@@ -36,11 +36,9 @@ export default function Philosophy() {
           </p>
         </div>
         <div className="values-grid">
-          {values.map((value, index) => (
-            <article key={index} className="value-card">
-              <span className="value-icon" role="img" aria-hidden="true">
-                {value.icon}
-              </span>
+          {values.map((value) => (
+            <article key={value.num} className="value-card">
+              <span className="value-num" aria-hidden="true">{value.num}</span>
               <h3 className="value-title">{value.title}</h3>
               <p className="value-description">{value.description}</p>
             </article>

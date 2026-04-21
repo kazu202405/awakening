@@ -1,15 +1,15 @@
 export default function Concerns() {
   const concerns = [
     {
-      icon: "\u{1F331}",
+      num: "01",
       text: "自分の本来の力を発揮できていない、\nもっと成長したいと感じている",
     },
     {
-      icon: "\u{1F3E2}",
+      num: "02",
       text: "組織のコミュニケーションや\n人財育成に課題を感じている",
     },
     {
-      icon: "\u{1F50D}",
+      num: "03",
       text: "日本の精神性を活かした\n自己変革・組織変革を学びたい",
     },
   ];
@@ -23,11 +23,9 @@ export default function Concerns() {
           </h2>
         </div>
         <div className="concerns-grid">
-          {concerns.map((concern, i) => (
-            <div key={i} className="concern-card">
-              <span className="concern-icon" role="img" aria-hidden="true">
-                {concern.icon}
-              </span>
+          {concerns.map((concern) => (
+            <div key={concern.num} className="concern-card">
+              <span className="concern-num" aria-hidden="true">{concern.num}</span>
               <p className="concern-text">{concern.text}</p>
             </div>
           ))}

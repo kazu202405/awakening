@@ -1,8 +1,13 @@
 import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Concerns from "@/components/Concerns";
 import Programs from "@/components/Programs";
+import Philosophy from "@/components/Philosophy";
+import Voices from "@/components/Voices";
+import CtaBanner from "@/components/CtaBanner";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -49,8 +54,13 @@ export default function Home() {
       <Header />
       <main id="main-content">
         <Hero />
+        <Concerns />
         <Programs />
+        <Philosophy />
+        <Voices />
+        <CtaBanner />
         <About />
+        <Contact />
       </main>
       <Footer />
     </>
