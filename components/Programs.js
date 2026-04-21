@@ -15,7 +15,7 @@ export default function Programs() {
       ],
       color: "#EEF2FA",
       accent: "#5A7AB5",
-      link: "https://coach-fiore.com/",
+      link: "/training",
       paymentLink: "/payment/nouryoku",
       image: "/bg-cosmic-1.png",
     },

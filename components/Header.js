@@ -10,6 +10,7 @@ export default function Header() {
   const navLinks = [
     { href: "/#programs", label: "事業内容" },
     { href: "/#philosophy", label: "理念" },
+    { href: "/training", label: "法人研修" },
     { href: "/#about", label: "協会について" },
     { href: "/#contact", label: "お問い合わせ" },
   ];
