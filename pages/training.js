@@ -59,6 +59,30 @@ export default function Training() {
         { label: "対象", value: "経営層・人事" },
       ],
     },
+    {
+      num: "05",
+      label: "Self-Work",
+      title: "引き寄せられ実践講座",
+      lead: "内なる三位一体を整えるセルフワーク。",
+      desc: "書籍内容をベースに、インナーチャイルドの癒し方、男性性・女性性のバランスチェック、三位一体を整えるセルフワークを学ぶ実践講座。音声コンテンツを通して、ご自身のペースで学びながら、本来の自分とのつながりを深めていきます。",
+      meta: [
+        { label: "価格", value: "¥7,700（税込）" },
+        { label: "形式", value: "音声コンテンツ" },
+        { label: "対象", value: "個人" },
+      ],
+    },
+    {
+      num: "06",
+      label: "Integration",
+      title: "三位一体統合セッション",
+      lead: "本来の自分へ還り、“引き寄せられる在り方”を育てる3ヶ月。",
+      desc: "書籍でお伝えしている「男性性・女性性・チャイルドの三位一体」の視点をもとに、潜在意識レベルから“在り方”を整え、現実の変化へとつなげていく個別セッション。単なる知識を学ぶのではなく、三位一体を整え、“在り方”そのものを変化させることで、現実の変容を促していきます。",
+      meta: [
+        { label: "価格", value: "¥248,000（税込）" },
+        { label: "期間", value: "3ヶ月・全6回（2週間に1回）" },
+        { label: "形式", value: "Zoom個別セッション" },
+      ],
+    },
   ];
 
   const flow = [
@@ -284,7 +308,7 @@ export default function Training() {
             <div className="training-section-head">
               <span className="training-section-label">Services</span>
               <h2 className="training-section-title">提供サービス</h2>
-              <p className="training-section-sub">貴社の状況・目的に応じて、4つのサービスを単独または組み合わせてご提供します。</p>
+              <p className="training-section-sub">貴社・ご自身の状況や目的に応じて、6つのサービスを単独または組み合わせてご提供します。</p>
             </div>
             <div className="training-service-grid">
               {services.map((s) => (
