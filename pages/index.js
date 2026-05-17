@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>日本アウェイクニング協会 | お子さんの可能性を信じるあなたへ</title>
+        <title>日本アウェイクニング協会 | 和の精神で調和と共創の未来へ</title>
         <meta
           name="description"
           content="和の精神性を軸に能力開花を推進する一般社団法人日本アウェイクニング協会。能力開花推進事業部、みらいのたね学園、母子共創アカデミーの3事業で、一人ひとりの可能性を開きます。"
@@ -30,7 +30,7 @@ export default function Home() {
 
         {/* OGP */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="日本アウェイクニング協会 | お子さんの可能性を信じるあなたへ" />
+        <meta property="og:title" content="日本アウェイクニング協会 | 和の精神で調和と共創の未来へ" />
         <meta
           property="og:description"
           content="不登校・子育てのお悩みに寄り添います。みらいのたね学園、母子共創アカデミー、能力開花推進の3事業を展開。無料相談会も毎月開催。"
@@ -41,7 +41,7 @@ export default function Home() {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="日本アウェイクニング協会 | お子さんの可能性を信じるあなたへ" />
+        <meta name="twitter:title" content="日本アウェイクニング協会 | 和の精神で調和と共創の未来へ" />
         <meta
           name="twitter:description"
           content="不登校・子育てのお悩みに寄り添います。みらいのたね学園、母子共創アカデミー、能力開花推進の3事業を展開。無料相談会も毎月開催。"
