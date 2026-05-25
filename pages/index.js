@@ -25,7 +25,7 @@ export default function Home() {
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://awakening.or.jp/" />
+        <link rel="canonical" href="https://awakening2026.com/" />
         <link rel="icon" href="/favicon.ico" />
 
         {/* OGP */}
@@ -36,7 +36,7 @@ export default function Home() {
           content="不登校・子育てのお悩みに寄り添います。みらいのたね学園、母子共創アカデミー、能力開花推進の3事業を展開。無料相談会も毎月開催。"
         />
         <meta property="og:site_name" content="一般社団法人日本アウェイクニング協会" />
-        <meta property="og:url" content="https://awakening.or.jp/" />
+        <meta property="og:url" content="https://awakening2026.com/" />
         <meta property="og:locale" content="ja_JP" />
 
         {/* Twitter Card */}

@@ -13,7 +13,7 @@ export default function Document() {
               "@type": "Organization",
               name: "一般社団法人日本アウェイクニング協会",
               alternateName: "日本アウェイクニング協会",
-              url: "https://awakening.or.jp/",
+              url: "https://awakening2026.com/",
               description:
                 "父親・母親・子供の3人一体で社会を変えていくことを目的とした一般社団法人。みらいのたね学園、母子共創アカデミー、能力開花の3事業を展開。",
               founder: {

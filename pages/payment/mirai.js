@@ -73,10 +73,11 @@ export default function PaymentMirai() {
             <div className="payment-notes">
               <h4>お支払いについて</h4>
               <ul>
-                <li>お支払い方法：クレジットカード決済（VISA / Mastercard / JCB / AMEX）</li>
+                <li>お支払い方法：クレジットカード決済（VISA / Mastercard / JCB / AMEX）。入学金は銀行振込も可</li>
                 <li>決済はUnivaPayによる安全なカード決済システムを利用しています</li>
                 <li>分割払いにも対応しております</li>
-                <li>月額プランは毎月、初回決済日と同日に自動課金されます</li>
+                <li>銀行振込をご希望の場合（入学金のみ）は、お申込み後にご案内する協会指定口座へお振込みください</li>
+                <li>月額プランは毎月、初回決済日と同日に自動課金されます（クレジットカードのみ）</li>
                 <li>解約は当月15日までのお申し出で翌月から課金停止となります</li>
               </ul>
               <p className="payment-legal-link">

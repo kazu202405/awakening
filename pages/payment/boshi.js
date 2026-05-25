@@ -81,10 +81,11 @@ export default function PaymentBoshi() {
             <div className="payment-notes">
               <h4>お支払いについて</h4>
               <ul>
-                <li>お支払い方法：クレジットカード決済（VISA / Mastercard / JCB / AMEX）</li>
+                <li>お支払い方法：クレジットカード決済（VISA / Mastercard / JCB / AMEX）、銀行振込</li>
                 <li>決済はUnivaPayによる安全なカード決済システムを利用しています</li>
                 <li>分割払いにも対応しております</li>
                 <li>クレジットカード決済はお申込み時に即時決済となります</li>
+                <li>銀行振込をご希望の場合は、お申込み後にご案内する協会指定口座へお振込みください（お申込み後7日以内）</li>
               </ul>
               <p className="payment-legal-link">
                 <a href="/legal">特定商取引法に基づく表記</a> ／ <a href="/privacy">プライバシーポリシー</a>

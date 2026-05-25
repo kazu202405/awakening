@@ -76,11 +76,23 @@ export default function Training() {
       label: "Integration",
       title: "三位一体統合セッション",
       lead: "本来の自分へ還り、“引き寄せられる在り方”を育てる3ヶ月。",
-      desc: "書籍でお伝えしている「男性性・女性性・チャイルドの三位一体」の視点をもとに、潜在意識レベルから“在り方”を整え、現実の変化へとつなげていく個別セッション。単なる知識を学ぶのではなく、三位一体を整え、“在り方”そのものを変化させることで、現実の変容を促していきます。",
+      desc: "書籍でお伝えしている「男性性・女性性・チャイルドの三位一体」の視点をもとに、潜在意識レベルから“在り方”を整え、現実の変化へとつなげていく個別セッション。単なる知識を学ぶのではなく、三位一体を整え、“在り方”そのものを変化させることで、現実の変容を促していきます。まずは無料相談（無料）にお申し込みください。",
       meta: [
         { label: "価格", value: "¥248,000（税込）" },
         { label: "期間", value: "3ヶ月・全6回（2週間に1回）" },
         { label: "形式", value: "Zoom個別セッション" },
+      ],
+    },
+    {
+      num: "07",
+      label: "1Day Seminar",
+      title: "可能性開花1Dayセミナー",
+      lead: "自己認識と可能性開花の1Dayセミナー。",
+      desc: "あなたの思考が創り出しているこの現実世界を認識し、自分の脳のプログラムを知ることで、望ましい現実を創り出すことができるようになります。受講後、目の前の現実がどんどん変化するのを実感していただけるでしょう。",
+      meta: [
+        { label: "価格", value: "¥55,000（税込）" },
+        { label: "形式", value: "対面のみ" },
+        { label: "特典", value: "電話サポート1回（希望者のみ）" },
       ],
     },
   ];
@@ -223,11 +235,11 @@ export default function Training() {
           content="法人研修,企業研修,経営者コーチング,組織変革,リーダーシップ研修,理念浸透,共創型組織,日本アウェイクニング協会"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://awakening.or.jp/training" />
+        <link rel="canonical" href="https://awakening2026.com/training" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="法人研修・講演・コーチング | 一般社団法人日本アウェイクニング協会" />
         <meta property="og:description" content="和の精神性をベースとした共創型人財開発。企業研修・講演・経営者コーチング・組織変革支援。" />
-        <meta property="og:url" content="https://awakening.or.jp/training" />
+        <meta property="og:url" content="https://awakening2026.com/training" />
       </Head>
 
       <Header />
@@ -308,7 +320,7 @@ export default function Training() {
             <div className="training-section-head">
               <span className="training-section-label">Services</span>
               <h2 className="training-section-title">提供サービス</h2>
-              <p className="training-section-sub">貴社・ご自身の状況や目的に応じて、6つのサービスを単独または組み合わせてご提供します。</p>
+              <p className="training-section-sub">貴社・ご自身の状況や目的に応じて、7つのサービスを単独または組み合わせてご提供します。</p>
             </div>
             <div className="training-service-grid">
               {services.map((s) => (
